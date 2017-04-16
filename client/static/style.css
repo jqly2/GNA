@@ -1,0 +1,73 @@
+body{
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left,rgba(218,212,240,0.6),rgba(101,213,101,0.5)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(right,rgba(218,212,240,0.6),rgba(101,213,101,0.5)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(right,rgba(218,212,240,0.4),rgba(101,213,101,0.5)); /*Fx 3.6-15*/
+  background: linear-gradient(to right, rgba(111, 174, 240, 0.4), rgba(101,213,101,0.4)); /*Standard*/
+}
+
+.gameImg{
+  height:30%;
+  width:33%;
+}
+
+.newArticles{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 16px;
+  width: 375px;
+  height: 200px;
+  font-weight:bold;
+  border-top: solid black 2px;
+  display:inline-block;
+  margin: 25px 20px 0px 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.outerLayer{
+  position:absolute;
+  vertical-align: top;
+  height:200px;
+  width:375px;
+  background-color: white;
+  opacity: 0.5;
+}
+
+.desc{
+  font-weight:none;
+  font-size: 12px;
+}
+
+.newTitle{
+  background-color: white;
+  opacity: 0.5;
+  position:absolute;
+  margin-top:140px;
+  width:375px;
+  color:black;
+
+}
+
+.source{
+  height:75px;
+  width:75px;
+}
+
+#gameTitles{
+  margin-top: 100px;
+}
+
+#header{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight:bold;
+  height:100px;
+
+  color: black;
+  margin-bottom: 30px;
+  vertical-align: top;
+  padding:5px;
+}

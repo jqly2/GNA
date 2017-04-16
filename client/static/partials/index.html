@@ -1,0 +1,32 @@
+<div ng-controller="gnaController">
+    <div id="header">
+        <h1>GNA</h1>
+        <select name="show-filter" ng-model="filter_name">
+            <option></option>
+            <option>PCGamer</option>
+            <option>Rock Paper Shotgun</option>
+        </select>
+    </div>
+    <div id="gameTitles">
+      <a href="" ng-click="findXcom2()">
+        <img class="gameImg" src="http://www.popoptiq.com/wp-content/uploads/2015/06/2875861-xcom-2-logo-static-e1433518340683.jpg" alt="Xcom 2 Logo">
+      </a>
+      <a href="" ng-click="findHs()">
+        <img class="gameImg" src="http://nerdreactor.com/wp-content/uploads/2015/04/Hearthstone_Logo.png?15016e" alt="Hearthstone Logo">
+      </a>
+      <a href="" ng-click="findFo4()">
+        <img class="gameImg" src="http://071bc3d04e2671665c74-5a267f839fbe60d0845a37698418bb02.r26.cf5.rackcdn.com/wp-content/uploads/2015/06/fallout-4-logo-640x325.jpg" alt="Fallout 4 Logo">
+      </a>
+    </div>
+    <hr>
+    <div class="newArticles" ng-repeat="new in news | filter: filter_name" ng-style="{'background-image': 'url(' + new.img + ')'}" ng-mouseover='showContent(this)' ng-mouseleave='hideContent(this)'>
+
+        <div class="outerLayer" ng-show="content">
+          <a href={{new.link}}>{{new.title}}</a>
+          <p class="desc">{{new.desc}}<p>
+          <br>
+          <img class="source" src={{new.sourceImg}} alt={{new.source}}>
+        </div>
+        <p ng-if="content == false" class="newTitle">{{new.title}}</p>
+    </div>
+</div>
